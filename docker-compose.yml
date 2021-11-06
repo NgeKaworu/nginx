@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  furan.xyz:
+    container_name: furan.xyz
+    restart: "always"
+    image: furan.xyz
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - frontend
+      - backend
+    ports:
+      - 80:80
+      - 443:443
+
+networks:
+  backend:
+    name: backend
+    driver: bridge
+  frontend:
+    name: frontend
+    driver: bridge
