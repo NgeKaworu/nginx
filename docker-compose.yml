@@ -4,9 +4,10 @@ services:
   furan.xyz:
     container_name: furan.xyz
     restart: "always"
-    image: nginx:stable-alpine
-    volumes:
-      - ./conf.d:/etc/nginx/conf.d
+    image: furan.xyz
+    build:
+      context: .
+      dockerfile: Dockerfile
     networks:
       - frontend
       - backend
