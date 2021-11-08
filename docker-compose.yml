@@ -4,7 +4,7 @@ services:
   furan.xyz:
     container_name: furan.xyz
     restart: "always"
-    image: furan.xyz
+    image: ngekaworu/furan.xyz
     build:
       context: .
       dockerfile: Dockerfile
