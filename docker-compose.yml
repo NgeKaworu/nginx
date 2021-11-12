@@ -3,8 +3,8 @@ version: "3.9"
 services:
   furan.xyz:
     container_name: furan.xyz
-    
     image: ngekaworu/furan.xyz
+    restart: "always"
     build:
       context: .
       dockerfile: Dockerfile
