@@ -23,5 +23,5 @@ jobs:
             cd nginx
             git checkout master
             git pull
-            sh up.sh
+            sh up.sh -b
             docker system prune -af
