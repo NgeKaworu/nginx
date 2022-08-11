@@ -15,8 +15,8 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - /etc/letsencrypt/archive/furan.xyz/fullchain1.pem:/etc/letsencrypt/live/furan.xyz/fullchain.pem
-      - /etc/letsencrypt/archive/furan.xyz/privkey1.pem:/etc/letsencrypt/live/furan.xyz/privkey.pem
+      - /etc/letsencrypt/live/furan.xyz/fullchain.pem:/etc/letsencrypt/live/furan.xyz/fullchain.pem
+      - /etc/letsencrypt/live/furan.xyz/privkey.pem:/etc/letsencrypt/live/furan.xyz/privkey.pem
 
 networks:
   backend:
