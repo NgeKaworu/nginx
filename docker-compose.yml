@@ -3,11 +3,8 @@ version: "3.9"
 services:
   furan.xyz:
     container_name: furan.xyz
-    image: ngekaworu/furan.xyz
+    image: nginx:stable-alpine
     restart: "always"
-    build:
-      context: .
-      dockerfile: Dockerfile
     networks:
       - frontend
       - backend
@@ -15,6 +12,7 @@ services:
       - 80:80
       - 443:443
     volumes:
+      - ./conf.d:/etc/nginx/conf.d
       - /etc/letsencrypt/live/furan.xyz/fullchain.pem:/etc/letsencrypt/live/furan.xyz/fullchain.pem
       - /etc/letsencrypt/live/furan.xyz/privkey.pem:/etc/letsencrypt/live/furan.xyz/privkey.pem
 
