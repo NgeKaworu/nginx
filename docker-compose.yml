@@ -13,8 +13,8 @@ services:
       - 443:443
     volumes:
       - ./conf.d:/etc/nginx/conf.d
-      - /etc/letsencrypt/live/furan.xyz/fullchain.pem:/etc/letsencrypt/live/furan.xyz/fullchain.pem
-      - /etc/letsencrypt/live/furan.xyz/privkey.pem:/etc/letsencrypt/live/furan.xyz/privkey.pem
+      - /etc/letsencrypt/live/furan.vip/fullchain.pem:/etc/letsencrypt/live/furan.vip/fullchain.pem
+      - /etc/letsencrypt/live/furan.vip/privkey.pem:/etc/letsencrypt/live/furan.vip/privkey.pem
 
 networks:
   backend:
